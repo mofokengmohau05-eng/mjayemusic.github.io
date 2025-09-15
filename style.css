@@ -1,0 +1,111 @@
+/* ====== Listening Party: Starter Styles ======
+   Save as: css/style.css (or alongside your homepage.html as style.css)
+   Theme: Royal black & gold
+   Tip: Edit the :root colors to rebrand fast.
+================================================== */
+
+:root{
+  --bg-1:#f60000;
+  --bg-2:#d20000;
+  --text:#f1f1f1;
+  --muted:#bdbdbd;
+  --accent:#f5c518; /* gold */
+  --accent-2:#ffffff;
+  --radius:20px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+/* A light reset */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Poppins", Arial, sans-serif;
+  color:var(--text);
+  background: radial-gradient(1200px 800px at 70% 10%, var(--bg-2), var(--bg-1));
+  line-height:1.6;
+}
+
+/* Layout helper */
+.container{
+  max-width:1100px;
+  margin-inline:auto;
+  padding: clamp(24px, 4vw, 60px) 20px;
+  text-align:center;
+}
+
+/* Hero */
+.hero{
+  padding: clamp(40px, 10vw, 120px) 0;
+}
+.hero h1{
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  letter-spacing:.04em;
+  margin:0 0 10px;
+}
+.hero p.lead{
+  font-size: clamp(1.05rem, 2.3vw, 1.25rem);
+  margin: 8px auto 28px;
+  max-width: 60ch;
+  color: var(--muted);
+}
+
+/* Date badge */
+.date-badge{
+  display:inline-block;
+  background: var(--accent);
+  color:#111;
+  font-weight:700;
+  padding: 10px 18px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* Button */
+.btn{
+  appearance:none;
+  border:none;
+  background: var(--accent);
+  color:#111;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight:700;
+  font-size:1rem;
+  cursor:pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+  box-shadow: var(--shadow);
+}
+.btn:hover{
+  transform: translateY(-2px);
+  background: var(--accent-2);
+  color: var(--accent);
+}
+.btn:active{
+  transform: translateY(0);
+}
+
+/* Cards (optional sections) */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.06);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  color: var(--muted);
+  font-size:.95rem;
+  padding: 26px 14px 40px;
+  border-top: 1px solid rgba(255,255,255,.06);
+  margin-top: 40px;
+}
+
+/* Utilities */
+.hidden{display:none !important}
+.center{display:grid; place-items:center}
+.spacer{height:32px}
